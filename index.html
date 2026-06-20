@@ -1,42 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Jessica Fritzges | Licensed Psychologist</title>
-    <!-- Tailwind CSS CDN for styling -->
+    
+    <!-- Exact Fonts Used in the Framer Template -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for Layout Execution -->
     <script src="https://jsdelivr.net"></script>
+    
     <style>
-        * { transition: all 0.2s ease-in-out; }
+        body { font-family: 'Inter', sans-serif; }
+        .font-syne { font-family: 'Syne', sans-serif; }
     </style>
 </head>
-<body class="bg-[#F9F8F6] text-[#2C2A29] font-sans antialiased selection:bg-[#EAE6E1]">
+<body class="bg-[#FBF9F6] text-[#2C2A29] antialiased selection:bg-[#EAE6E1]">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-[#F9F8F6]/90 backdrop-blur-md border-b border-[#EAE6E1]">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-lg font-medium tracking-tight">Dr. Jessica Fritzges</a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-                <a href="#services" class="hover:text-black">Services</a>
-                <a href="#contact" class="bg-[#2C2A29] text-[#F9F8F6] px-4 py-2 rounded-full hover:bg-black">Contact</a>
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-[#FBF9F6]/80 backdrop-blur-md border-b border-[#2C2A29]/5">
+        <div class="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="font-syne text-xl font-bold tracking-tight text-[#2C2A29]">
+                Dr. Jessica Fritzges
+            </a>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide">
+                <a href="#about" class="text-[#2C2A29]/70 hover:text-[#2C2A29] transition-colors">About</a>
+                <a href="#services" class="text-[#2C2A29]/70 hover:text-[#2C2A29] transition-colors">Services</a>
+                <a href="#specialties" class="text-[#2C2A29]/70 hover:text-[#2C2A29] transition-colors">Specialties</a>
+                <a href="#contact" class="bg-[#2C2A29] text-[#FBF9F6] px-6 py-3 rounded-full hover:bg-black transition-all font-syne font-medium tracking-normal">
+                    Get in Touch
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h1 class="text-5xl font-light mb-8">Support for insight and healing</h1>
-        <p class="text-lg text-gray-600 mb-10">Balanced therapy and evaluations.</p>
-        <a href="#contact" class="bg-[#2C2A29] text-[#F9F8F6] px-8 py-3 rounded-full">Schedule</a>
-    </section>
+    <header class="max-w-5xl mx-auto px-6 pt-24 pb-20 text-center">
+        <span class="text-xs uppercase tracking-[0.2em] text-[#2C2A29]/50 font-semibold block mb-4">
+            Licensed Clinical Psychologist
+        </span>
+        <h1 class="font-syne text-5xl md:text-7xl font-normal leading-[1.1] text-[#2C2A29] max-w-4xl mx-auto mb-8">
+            A safe space for insight, growth, and lasting healing.
+        </h1>
+        <p class="text-base md:text-lg text-[#2C2A29]/70 max-w-xl mx-auto leading-relaxed mb-12">
+            Providing evidence-based, compassionate psychological therapy and comprehensive evaluations tailored to your unique journey.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#contact" class="w-full sm:w-auto bg-[#2C2A29] text-[#FBF9F6] font-syne font-medium px-8 py-4 rounded-full hover:bg-black transition-all shadow-sm">
+                Schedule a Consultation
+            </a>
+            <a href="#services" class="w-full sm:w-auto border border-[#2C2A29]/20 text-[#2C2A29] font-syne font-medium px-8 py-4 rounded-full hover:bg-[#2C2A29]/5 transition-all">
+                Explore Services
+            </a>
+        </div>
+    </header>
 
-    <!-- Services Section -->
-    <section id="services" class="max-w-6xl mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-2xl border border-[#EAE6E1]">
-                <h3 class="text-xl mb-3">Therapy</h3>
-                <p class="text-gray-600 text-sm">Individual support for emotional health.</p>
-            </div>
-            <!-- Additional cards here -->
+    <!-- Statement / About Highlight -->
+    <section id="about" class="bg-[#2C2A29] text-[#FBF9F6] py-24 my-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-syne text-2xl md:text-4xl font-light leading-relaxed">
+                "Therapy is not about fixing what is broken—it is about uncovering your innate resilience and building a deep understanding of your inner world."
+            </p>
+            <div class="w-12 h-[1px] bg-[#FBF9F6]/30 mx-auto my-8"></div>
+            <span class="text-sm uppercase tracking-widest text-[#FBF9F6]/60">Our Philosophy</span>
         </div>
     </section>
+
+    <!-- Services Grid Section -->
+    <section id="services" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center max-w-xl mx-auto mb-16">
+            <h2 class="font-syne text-3xl md:text-4xl font-semibold mb-4">Clinical Services</h2>
+            <p class="text-[#2C2A29]/60 text-sm">Professional care tailored to adolescents, adults, and families.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-10 rounded-3xl border border-[#2C2A29]/5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_4px_30px_rgba(0,0,0,0.03)] transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-[#FBF9F6] flex items-center justify-center text-xl mb-6 border border-[#2C2A29]/5">🌱</div>
+                    <h3 class="font-syne text-2xl font-medium mb-4 text-[#2C2A29]">Individual Psychotherapy</h3>
+                    <p class="text-[#2C2A29]/70 text-sm leading-relaxed mb-6">
+                        One-on-one sessions integrating Cognitive Behavioral Therapy (CBT), psychodynamic insights, and mindfulness to help navigate anxiety, depression, life transitions, and trauma.
+                    </p>
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#2C2A29]/40 block mt-4">50-Minute Sessions</span>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-10 rounded-3xl border border-[#2C2A29]/5 shadow-[0_4px_20px_rgba(0,0,0,0.01)] hover:shadow-[0_4px_30px_rgba(0,0,0,0.03)] transition-all flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-2xl bg-[#FBF9F6] flex items-center justify-center text-xl mb-6 border border-[#2C2A29]/5">📊</div>
+                    <h3 class="font-syne text-2xl font-medium mb-4 text-[#2C2A29]">Psychological Evaluations</h3>
+                    <p class="text-[#2C2A29]/70 text-sm leading-relaxed mb-6">
+                        Comprehensive diagnostic assessments for ADHD, learning differences, diagnostic clarification, and academic accommodations. Providing clear clarity, guidance, and actionable paths forward.
+                    </p>
+                </div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#2C2A29]/40 block mt-4">Comprehensive Assessment</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Badges Section -->
+    <section id="specialties" class="bg-[#F4F1EC] py-20 border-y border-[#2C2A29]/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-syne text-3xl font-semibold mb-10">Areas of Expertise</h2>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-white px-5 py-2.5 rounded-full text-sm font-medium text-[#2C2A29]/80 border border-[#2C2A29]/5">Anxiety & Panic</span>
+                <span class="bg-white px-5 py-2.5 rounded-full text-sm font-medium text-[#2C2A29]/80 border border-[#2C2A29]/5">Depressive Disorders</span>
+                <span class="bg-white px-5 py-2.5 rounded-full text-sm font-medium text-[#2C2A29]/80 border border-[#2C2A29]/5">ADHD & Executive Functioning</span>
+                <span class="bg-white px-5 py-2.5 rounded-full text-sm font-medium text-[#2C2A29]/80 border border-[#2C2A29]/5">Life Transitions</span>
+                <span class="bg-white px-5 py-2.5 rounded-full text-sm font-medium text-[#2C2A29]/80 border border-[#2C2A29]/5">Trauma-Informed Care</span>
+                <span class="bg-white px-5 py-2.5 rounded-full text-sm font-medium text-[#2C2A29]/80 border border-[#2C2A29]/5">Relationship Dynamics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Footer Section -->
+    <footer id="contact" class="max-w-6xl mx-auto px-6 pt-24 pb-12">
+        <div class="bg-[#2C2A29] text-[#FBF9F6] rounded-[2rem] p-8 md:p-16 text-center relative overflow-hidden">
+            <h2 class="font-syne text-4xl md:text-5xl font-medium mb-6">Begin your healing process.</h2>
+            <p class="text-[#FBF9F6]/70 max-w-md mx-auto text-sm md:text-base mb-10">
+                Reach out today to ask questions or set up an initial consultation. I respond to all inquiries within 24–48 business hours.
+            </p>
+            <a href="mailto:jessica@example.com" class="inline-block bg-[#FBF9F6] text-[#2C2A29] font-syne font-medium px-8 py-4 rounded-full hover:bg-white transition-all shadow-md">
+                jessica@yourdomain.com
+            </a>
+            
+            <div class="mt-16 pt-8 border-t border-[#FBF9F6]/10 flex flex-col md:flex-row items-center justify-between text-xs text-[#FBF9F6]/50 gap-4">
+                <p>© 2026 Dr. Jessica Fritzges. All rights reserved.</p>
+                <p>Located in Private Practice | Telehealth Available</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
