@@ -323,3 +323,70 @@ a {
         gap: 14px;
     }
 }
+/* ==========================================
+   JULY REFINEMENTS
+   ========================================== */
+
+/* Hero buttons side-by-side */
+.hero-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Make Schedule Appointment consistent */
+.nav-btn,
+.btn-primary {
+    min-width: 220px;
+    text-align: center;
+}
+
+/* More room below beach image */
+.hero-section {
+    padding-bottom: 140px;
+}
+
+/* More separation before gradient quote */
+.philosophy-section {
+    padding-top: 80px;
+}
+
+/* Narrower content area for cards */
+.services-grid {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* Reduce CTA height */
+.cta-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Mobile navigation improvements */
+@media (max-width: 768px) {
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-btn {
+        min-width: 180px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+    }
+}
