@@ -1,5 +1,5 @@
 /* ==========================================
-   1. GLOBAL STYLES & CORE TYPOGRAPHY
+   1. GLOBAL STYLES & TYPOGRAPHY SYSTEM
    ========================================== */
 @import url('https://googleapis.com');
 
@@ -10,10 +10,9 @@
 }
 
 body {
-    /* Set to Inter for crisp, modern reading of your body description text */
     font-family: 'Inter', sans-serif;
-    background-color: #EFE9E0; /* Exact Framer canvas sand background */
-    color: #1C1B1A; /* Dark charcoal lettering */
+    background-color: #EFE5D4; /* 1. Updated entire layout background color */
+    color: #1C1B1A; 
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -25,14 +24,41 @@ body {
 }
 
 /* ==========================================
-   2. CUSTOM STATIC MENU BAR (COLOR MATCHED & LEFT ALIGNED)
+   2. REUSABLE TRADITIONAL HANDWRITTEN FONTS
+   ========================================== */
+/* Main prominent header font specification */
+.signature-heading {
+    font-family: 'Italianno', cursive;
+    font-size: 54px; 
+    font-weight: 400; 
+    line-height: 0.95em; 
+    letter-spacing: 0em; 
+    font-style: normal;
+    text-transform: none;
+    color: #1C1B1A; 
+}
+
+/* Scaled child class: Styled exactly identical but mathematically 3/4 as tall (38px) */
+.signature-subheading {
+    font-family: 'Italianno', cursive;
+    font-size: 38px; 
+    font-weight: 400; 
+    line-height: 0.95em; 
+    letter-spacing: 0em; 
+    font-style: normal;
+    text-transform: none;
+    color: #1C1B1A; 
+}
+
+/* ==========================================
+   3. RE-COLORED FIXED NAVIGATION BAR
    ========================================== */
 .navbar {
-    background-color: #F5F0E8; /* Contrasting soft bar background from Framer */
+    background-color: #F7F0E5; /* 2. Updated exact custom menu bar color */
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(28, 27, 26, 0.05); /* Soft separation line */
+    border-bottom: 1px solid rgba(28, 27, 26, 0.05); 
     width: 100%;
 }
 
@@ -41,15 +67,14 @@ body {
     margin: 0 auto;
     padding: 18px 32px;
     display: flex;
-    justify-content: space-between; /* Pushes brand to left, links to right */
+    justify-content: space-between; 
     align-items: center;
 }
 
-/* Perfect left-aligned typography for your name logo */
 .nav-logo {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
-    font-weight: 600; /* Bolder structure for identity */
+    font-weight: 600; 
     color: #1C1B1A;
     text-decoration: none;
     letter-spacing: -0.01em;
@@ -62,11 +87,10 @@ body {
     margin-left: 4px;
 }
 
-/* Fine-tuned spacing for right-side hyperlinked menus */
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px; /* Uniform, clean spacing between pages */
+    gap: 32px; 
 }
 
 .nav-item {
@@ -82,16 +106,15 @@ body {
     color: #1C1B1A;
 }
 
-/* Framer style pill button for appointments */
 .nav-btn {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
     font-weight: 500;
-    color: #EFE9E0;
+    color: #EFE5D4;
     background-color: #1C1B1A;
     text-decoration: none;
     padding: 10px 22px;
-    border-radius: 100px; /* Fluid capsule look */
+    border-radius: 100px; 
     margin-left: 8px;
     transition: opacity 0.2s ease;
 }
@@ -101,7 +124,7 @@ body {
 }
 
 /* ==========================================
-   3. HERO CONTENT & PRIMARY FONTS
+   4. HERO SECTIONS & SPACING LAYOUTS
    ========================================== */
 .hero-section {
     padding: 120px 0 60px 0;
@@ -113,25 +136,17 @@ body {
     margin: 0 auto;
 }
 
-/* Tiny uppercase text header across top */
 .hero-content h1 {
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.18em; /* Clean letter spacing */
+    letter-spacing: 0.18em; 
     color: #7A746D;
     margin-bottom: 24px;
 }
 
-/* Playfair Display script italic layout for main headers */
 .hero-subtitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem; 
-    font-style: italic;
-    font-weight: 400;
-    color: #1C1B1A;
-    line-height: 1.15;
     margin-bottom: 32px;
 }
 
@@ -154,7 +169,7 @@ body {
     font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #EFE9E0;
+    color: #EFE5D4;
     background-color: #1C1B1A;
     text-decoration: none;
     padding: 14px 28px;
@@ -178,14 +193,14 @@ body {
 }
 
 /* ==========================================
-   4. MIDDLE PHILOSOPHY CONTAINER
+   5. INTERIOR ROW CONTAINERS
    ========================================== */
 .philosophy-section {
     padding: 40px 0 80px 0;
 }
 
 .philosophy-text {
-    background-color: #E5DDD2; /* Darker accent block tone */
+    background-color: #E2D7C5; /* Tinted layout pod contrast */
     padding: 44px 64px;
     border-radius: 100px; 
     font-family: 'Inter', sans-serif;
@@ -197,9 +212,6 @@ body {
     text-align: center;
 }
 
-/* ==========================================
-   5. CARE PATHWAYS LOWER TILES
-   ========================================== */
 .services-section {
     padding: 60px 0 100px 0;
     text-align: center;
@@ -210,12 +222,8 @@ body {
 }
 
 .section-tag {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    font-style: italic;
-    color: #1C1B1A;
+    margin-bottom: 16px;
     display: block;
-    margin-bottom: 12px;
 }
 
 .section-intro h2 {
@@ -232,7 +240,7 @@ body {
 }
 
 .service-card {
-    background-color: #F7F5F0;
+    background-color: #F5EFE4; /* Light clean card color */
     padding: 44px 36px;
     border-radius: 24px; 
     text-align: left;
@@ -251,9 +259,9 @@ body {
 }
 
 .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.45rem;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
     color: #1C1B1A;
     margin-bottom: 12px;
 }
@@ -280,19 +288,16 @@ body {
 }
 
 /* ==========================================
-   6. CONTACT BLOCK & FOOTER ROW
+   6. DEEP CONTRAST BOTTOM CTA & FOOTER
    ========================================== */
 .cta-section {
     background-color: #1C1B1A; 
-    color: #EFE9E0;
+    color: #EFE5D4;
     padding: 100px 0;
     text-align: center;
 }
 
 .cta-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 2.8rem;
     margin-bottom: 16px;
 }
 
@@ -309,14 +314,14 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     color: #1C1B1A;
-    background-color: #EFE9E0;
+    background-color: #EFE5D4;
     text-decoration: none;
     padding: 14px 32px;
     border-radius: 100px;
 }
 
 .footer {
-    background-color: #EFE9E0;
+    background-color: #EFE5D4;
     padding: 48px 0;
     border-top: 1px solid rgba(28, 27, 26, 0.06);
 }
@@ -328,8 +333,6 @@ body {
 }
 
 .footer-tagline {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
     color: #423F3B;
 }
 
@@ -340,7 +343,7 @@ body {
 }
 
 /* ==========================================
-   7. MOBILE LAYOUT SCALING OVERRIDES
+   7. PHONE DISPLAY SCALE DOWN RESPONSIVENESS
    ========================================== */
 @media (max-width: 768px) {
     .nav-container {
@@ -353,8 +356,11 @@ body {
         justify-content: center;
         gap: 16px;
     }
-    .hero-subtitle {
-        font-size: 2.5rem;
+    .signature-heading {
+        font-size: 40px; 
+    }
+    .signature-subheading {
+        font-size: 30px;
     }
     .philosophy-text {
         border-radius: 32px;
