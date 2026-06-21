@@ -17,13 +17,13 @@
 
 
 /* ==========================================
-   BASE TYPOGRAPHY
+   BASE
    ========================================== */
 
 body {
     font-family: "Philosopher", sans-serif;
     background: #EFE5D4;
-    color: #1F1A17;
+    color: #17212B;
     font-size: 18px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -46,6 +46,8 @@ a {
     --therapy: #f8f1e7;
     --evaluation: #eddac9;
     --approach: #e3d7d5;
+
+    --section-pad: clamp(90px, 10vw, 170px);
 }
 
 
@@ -58,7 +60,7 @@ a {
     top: 0;
     z-index: 1000;
     background: #F7F0E5;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .nav-container {
@@ -70,13 +72,12 @@ a {
     align-items: center;
 }
 
-/* FIX: single-line bold nav identity */
 .nav-logo {
     font-size: 16px;
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     white-space: nowrap;
 }
 
@@ -85,23 +86,41 @@ a {
     opacity: 0.7;
 }
 
+.nav-links {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
 
 /* ==========================================
-   HERO SECTION (FIXED TYPOGRAPHY SYSTEM)
+   HERO
    ========================================== */
 
 .hero-section {
     position: relative;
-    padding: 200px 0;
-    text-align: center;
+    background-image: url('./assets/beach.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: var(--section-pad) 0;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(239, 229, 212, 0.72);
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 22px;
 }
 
 /* small uppercase line */
@@ -109,35 +128,39 @@ a {
     font-size: 14px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(31,26,23,0.6);
+    color: rgba(23,33,43,0.6);
 }
 
-/* 🔥 ONLY HERO SCRIPT STYLE (NO CONFLICTING CLASS) */
-.signature-heading {
-    font-family: "Italianno", cursive;
-    font-size: 76px;
-    font-weight: 400;
-    line-height: 0.9;
+/* 🔥 MAIN HERO LINE (FIXED SCALE) */
+.hero-section .signature-heading {
+    font-family: "Italianno", cursive !important;
+    font-size: 72px !important;
+    line-height: 0.9 !important;
+    font-weight: 400 !important;
+    display: block;
     text-align: center;
     margin: 0;
-    display: block;
-    color: #1F1A17;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.08);
 }
 
-/* supporting paragraph under hero */
+/* supporting paragraph */
 .hero-description {
     font-size: 18px;
+    color: rgba(23,33,43,0.82);
     max-width: 720px;
     margin: 0 auto;
-    color: rgba(31,26,23,0.85);
-    line-height: 1.75;
 }
 
 
 /* ==========================================
-   REMOVE CONFLICT SOURCE (IMPORTANT FIX)
+   TYPOGRAPHY HELPERS
    ========================================== */
-/* intentionally NOT defining signature-subheading as hero text anymore */
+
+.signature-subheading {
+    font-family: "Italianno", cursive;
+    font-size: 48px;
+    line-height: 1;
+}
 
 
 /* ==========================================
@@ -179,17 +202,13 @@ a {
 
 
 /* ==========================================
-   PHILOSOPHY SECTION
+   PHILOSOPHY BOX
    ========================================== */
-
-.philosophy-section {
-    padding: 60px 0 100px;
-}
 
 .philosophy-text {
     max-width: 860px;
     margin: 0 auto;
-    padding: 60px 72px;
+    padding: 52px 64px;
     border-radius: 48px;
     text-align: center;
     font-size: 18px;
@@ -203,23 +222,23 @@ a {
 
 
 /* ==========================================
-   CARE PATHWAYS
+   SERVICES
    ========================================== */
 
 .services-section {
-    padding: 80px 0 140px;
+    padding: 50px 0 var(--section-pad);
     text-align: center;
 }
 
 .section-tag {
     font-family: "Italianno", cursive;
     font-size: 48px;
-    display: block;
+    line-height: 1;
 }
 
 
 /* ==========================================
-   CARDS (KEEP YOUR COLOR SYSTEM)
+   CARDS (UNCHANGED COLORS)
    ========================================== */
 
 .services-grid {
@@ -229,23 +248,18 @@ a {
 }
 
 .service-card {
-    padding: 44px 36px;
+    padding: 42px 36px;
     border-radius: 36px;
     text-align: left;
 }
 
-.service-card:nth-child(1) { background: var(--therapy); }
-.service-card:nth-child(2) { background: var(--evaluation); }
-.service-card:nth-child(3) { background: var(--approach); }
+.therapy-card { background: var(--therapy); }
+.evaluation-card { background: var(--evaluation); }
+.approach-card { background: var(--approach); }
 
-.service-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.service-card p {
-    font-size: 16px;
-    line-height: 1.6;
+.service-card a {
+    font-weight: 700;
+    color: inherit;
 }
 
 
@@ -257,14 +271,14 @@ a {
     background: var(--charcoal);
     color: var(--paper);
     text-align: center;
-    padding: 140px 0;
+    padding: var(--section-pad) 0;
 }
 
 .cta-section p {
     font-size: 18px;
-    opacity: 0.85;
     max-width: 720px;
     margin: 0 auto;
+    opacity: 0.85;
 }
 
 
@@ -295,12 +309,13 @@ a {
         gap: 14px;
     }
 
-    .hero-section {
-        padding: 140px 0;
+    .hero-content {
+        padding: 0 16px;
     }
 
-    .signature-heading {
-        font-size: 54px;
+    .philosophy-text {
+        padding: 32px 20px;
+        border-radius: 32px;
     }
 
     .footer-content {
