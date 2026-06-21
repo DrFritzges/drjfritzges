@@ -31,7 +31,7 @@ body {
 
 
 /* ==========================================
-   GLOBAL LINK FIX (REMOVES BLUE COMPLETELY)
+   GLOBAL LINKS FIX
    ========================================== */
 
 a {
@@ -41,7 +41,7 @@ a {
 
 
 /* ==========================================
-   FLUID TYPE
+   TYPE SYSTEM
    ========================================== */
 
 :root {
@@ -59,29 +59,16 @@ a {
 
 
 /* ==========================================
-   LAYOUT
-   ========================================== */
-
-.container {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 32px;
-}
-
-
-/* ==========================================
-   SCRIPT TYPOGRAPHY
+   SCRIPT TYPOGRAPHY (FIXED ROLE ASSIGNMENT)
    ========================================== */
 
 .signature-heading {
     font-family: "Italianno", cursive;
-    font-size: var(--hero-script);
+    font-size: var(--hero-script); /* NOW CORRECTLY ~54px */
     line-height: .95;
     font-weight: 400;
 }
 
-/* CARE PATHWAYS (UPDATED PER REQUEST) */
 .signature-subheading {
     font-family: "Italianno", cursive;
     font-size: var(--section-script);
@@ -91,7 +78,7 @@ a {
 
 
 /* ==========================================
-   NAVIGATION
+   NAV
    ========================================== */
 
 .navbar {
@@ -128,25 +115,9 @@ a {
     align-items: center;
 }
 
-.nav-item,
-.nav-btn {
-    font-size: var(--text-sm);
-    color: inherit;
-}
-
-
-/* BUTTON STYLE FIX (prevents blue links in nav/buttons) */
-.nav-btn {
-    font-weight: 700;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background: #17212B;
-    color: #EFE5D4;
-}
-
 
 /* ==========================================
-   HERO
+   HERO (BEACH)
    ========================================== */
 
 .hero-section {
@@ -177,8 +148,8 @@ a {
 
 .hero-content h1 {
     font-size: var(--text-xs);
-    text-transform: uppercase;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: rgba(23,33,43,.6);
 }
 
@@ -189,16 +160,31 @@ a {
 
 
 /* ==========================================
-   BUTTONS (FIX BLUE LINKS)
+   BUTTON COLORS (UPDATED SYSTEM)
    ========================================== */
 
-.hero-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-items: center;
+/* APPROACH COLOR (used for Schedule buttons + CTA) */
+:root {
+    --approach: #e3d7d5;
+    --evaluation: #eddac9;
 }
 
+/* NAV + CENTER SCHEDULE BUTTONS */
+.nav-btn,
+.btn-primary {
+    background: var(--approach);
+    color: #17212B;
+}
+
+/* EXPLORE SERVICES BUTTON */
+.btn-secondary {
+    background: var(--evaluation);
+    color: #17212B;
+    border: 1px solid rgba(23,33,43,.08);
+}
+
+
+/* BUTTON BASE */
 .btn-primary,
 .btn-secondary {
     width: 100%;
@@ -208,24 +194,23 @@ a {
     border-radius: 999px;
     font-weight: 700;
     font-size: var(--text-sm);
-    color: inherit;
-}
-
-/* explicit overrides so nothing goes blue */
-.btn-primary {
-    background: #17212B;
-    color: #EFE5D4;
-}
-
-.btn-secondary {
-    background: #F7F0E5;
-    border: 1px solid rgba(23,33,43,.08);
-    color: #17212B;
 }
 
 
 /* ==========================================
-   PHILOSOPHY
+   HERO ACTION LAYOUT
+   ========================================== */
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+
+/* ==========================================
+   PHILOSOPHY BOX (UPDATED GRADIENT)
    ========================================== */
 
 .philosophy-text {
@@ -233,14 +218,14 @@ a {
     margin: 0 auto;
     padding: 48px 64px;
     border-radius: 48px;
-    font-size: var(--text-md);
     text-align: center;
+    font-size: var(--text-md);
 
+    /* NOW: evaluation → approach gradient ONLY */
     background: linear-gradient(
         135deg,
-        #EFE5D4 0%,
-        #EADDD0 45%,
-        #E3D7E1 100%
+        var(--evaluation) 0%,
+        var(--approach) 100%
     );
 }
 
@@ -254,11 +239,8 @@ a {
     text-align: center;
 }
 
-/* CARE PATHWAYS LABEL IMPROVED */
 .section-tag {
     font-size: var(--section-script);
-    letter-spacing: 0;
-    text-transform: none;
 }
 
 
@@ -278,29 +260,13 @@ a {
     text-align: left;
 }
 
-/* YOUR NEW COLORS */
+/* FINAL CARD COLORS */
 .therapy-card { background: #f8f1e7; }
 .evaluation-card { background: #eddac9; }
 .approach-card { background: #e3d7d5; }
 
-.card-label {
-    font-size: var(--text-xs);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
 
-.service-card h3 {
-    font-size: var(--text-lg);
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    font-size: var(--text-md);
-    color: rgba(23,33,43,.8);
-}
-
-
-/* FORCE LINKS INSIDE CARDS TO NEVER TURN BLUE */
+/* FORCE CARD LINKS NOT BLUE */
 .service-card a {
     color: inherit;
     font-weight: 700;
@@ -308,12 +274,12 @@ a {
 
 
 /* ==========================================
-   CTA
+   CTA (MATCH APPROACH COLOR)
    ========================================== */
 
 .cta-section {
-    background: #17212B;
-    color: #EFE5D4;
+    background: var(--approach);
+    color: #17212B;
     text-align: center;
     padding: var(--section-pad) 0;
 }
