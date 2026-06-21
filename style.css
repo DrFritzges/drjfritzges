@@ -1,5 +1,5 @@
 /* ==========================================
-   1. GLOBAL STYLES & TYPOGRAPHY SYSTEM
+   1. GLOBAL STYLES & BACKGROUND COLORS
    ========================================== */
 @import url('https://googleapis.com');
 
@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #EFE5D4; /* 1. Updated entire layout background color */
+    background-color: #EFE5D4; /* Locked to your exact canvas tone */
     color: #1C1B1A; 
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -26,46 +26,48 @@ body {
 /* ==========================================
    2. REUSABLE TRADITIONAL HANDWRITTEN FONTS
    ========================================== */
-/* Main prominent header font specification */
+/* Upscaled to perfectly replicate the visual presence of your Framer site */
 .signature-heading {
     font-family: 'Italianno', cursive;
-    font-size: 54px; 
+    font-size: 78px; 
     font-weight: 400; 
-    line-height: 0.95em; 
+    line-height: 0.85em; 
     letter-spacing: 0em; 
     font-style: normal;
     text-transform: none;
     color: #1C1B1A; 
+    display: inline-block;
 }
 
-/* Scaled child class: Styled exactly identical but mathematically 3/4 as tall (38px) */
+/* Care Pathways scaled to precisely 3/4 of the hero text layout size */
 .signature-subheading {
     font-family: 'Italianno', cursive;
-    font-size: 38px; 
+    font-size: 56px; 
     font-weight: 400; 
-    line-height: 0.95em; 
+    line-height: 0.85em; 
     letter-spacing: 0em; 
     font-style: normal;
     text-transform: none;
     color: #1C1B1A; 
+    display: inline-block;
 }
 
 /* ==========================================
-   3. RE-COLORED FIXED NAVIGATION BAR
+   3. MENU BAR (RE-COLORED AND PADDING BALANCED)
    ========================================== */
 .navbar {
-    background-color: #F7F0E5; /* 2. Updated exact custom menu bar color */
+    background-color: #F7F0E5; /* Your exact requested top bar color */
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(28, 27, 26, 0.05); 
+    border-bottom: 1px solid rgba(28, 27, 26, 0.04); 
     width: 100%;
 }
 
 .nav-container {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 18px 32px;
+    padding: 16px 32px;
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -193,14 +195,14 @@ body {
 }
 
 /* ==========================================
-   5. INTERIOR ROW CONTAINERS
+   5. INTERIOR CARD GRIDS & PODS
    ========================================== */
 .philosophy-section {
     padding: 40px 0 80px 0;
 }
 
 .philosophy-text {
-    background-color: #E2D7C5; /* Tinted layout pod contrast */
+    background-color: #E2D7C5; 
     padding: 44px 64px;
     border-radius: 100px; 
     font-family: 'Inter', sans-serif;
@@ -218,11 +220,11 @@ body {
 }
 
 .section-intro {
-    margin-bottom: 54px;
+    margin-bottom: 40px;
 }
 
 .section-tag {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     display: block;
 }
 
@@ -240,7 +242,7 @@ body {
 }
 
 .service-card {
-    background-color: #F5EFE4; /* Light clean card color */
+    background-color: #F5EFE4; 
     padding: 44px 36px;
     border-radius: 24px; 
     text-align: left;
@@ -288,7 +290,7 @@ body {
 }
 
 /* ==========================================
-   6. DEEP CONTRAST BOTTOM CTA & FOOTER
+   6. CTA SECTIONS & FOOTERS
    ========================================== */
 .cta-section {
     background-color: #1C1B1A; 
@@ -343,7 +345,7 @@ body {
 }
 
 /* ==========================================
-   7. PHONE DISPLAY SCALE DOWN RESPONSIVENESS
+   7. PHONE DISPLAY SCALE RESPONSIVENESS
    ========================================== */
 @media (max-width: 768px) {
     .nav-container {
@@ -357,10 +359,10 @@ body {
         gap: 16px;
     }
     .signature-heading {
-        font-size: 40px; 
+        font-size: 50px; 
     }
     .signature-subheading {
-        font-size: 30px;
+        font-size: 38px;
     }
     .philosophy-text {
         border-radius: 32px;
