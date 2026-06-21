@@ -332,7 +332,17 @@ flex-direction: column;
 background: #F5EFE4;
 
 }
+.therapy-card {
+    background: #F3E7D8;
+}
 
+.evaluation-card {
+    background: #E6DDD2;
+}
+
+.approach-card {
+    background: #E6DCE4;
+}
 .card-label {
 
 font-family: 'Philosopher', sans-serif;
