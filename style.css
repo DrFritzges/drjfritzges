@@ -1,4 +1,3 @@
-
 /* ==========================================
    FONTS
    ========================================== */
@@ -30,8 +29,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
-/* Remove default link blue everywhere */
 a {
     color: inherit;
     text-decoration: none;
@@ -50,43 +47,12 @@ a {
     --evaluation: #eddac9;
     --approach: #e3d7d5;
 
-    /* TYPOGRAPHY SCALE (FIXED) */
-    --text-sm: 16px;
-    --text-md: 18px;
-    --text-lg: 22px;
-
-    --hero-script: 64px;
-    --section-script: 48px;
-
     --section-pad: clamp(90px, 10vw, 170px);
 }
 
 
 /* ==========================================
-   TYPOGRAPHY
-   ========================================== */
-
-/* HERO SCRIPT (STEADY SUPPORT FIXED) */
-.hero-section .signature-heading {
-    font-family: "Italianno", cursive !important;
-    font-size: var(--hero-script) !important;
-    line-height: 0.95 !important;
-    font-weight: 400 !important;
-    display: block;
-    text-align: center;
-}
-
-/* CARE PATHWAYS */
-.signature-subheading {
-    font-family: "Italianno", cursive;
-    font-size: var(--section-script);
-    line-height: 1;
-    font-weight: 400;
-}
-
-
-/* ==========================================
-   NAVIGATION (FIXED LAYOUT)
+   NAVIGATION
    ========================================== */
 
 .navbar {
@@ -128,7 +94,7 @@ a {
 
 
 /* ==========================================
-   HERO (BEACH IMAGE)
+   HERO
    ========================================== */
 
 .hero-section {
@@ -149,7 +115,7 @@ a {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 640px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -157,6 +123,7 @@ a {
     gap: 22px;
 }
 
+/* small uppercase line */
 .hero-content h1 {
     font-size: 14px;
     letter-spacing: 0.08em;
@@ -164,14 +131,40 @@ a {
     color: rgba(23,33,43,0.6);
 }
 
+/* 🔥 MAIN HERO LINE (FIXED SCALE) */
+.hero-section .signature-heading {
+    font-family: "Italianno", cursive !important;
+    font-size: 72px !important;
+    line-height: 0.9 !important;
+    font-weight: 400 !important;
+    display: block;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.08);
+}
+
+/* supporting paragraph */
 .hero-description {
     font-size: 18px;
     color: rgba(23,33,43,0.82);
+    max-width: 720px;
+    margin: 0 auto;
 }
 
 
 /* ==========================================
-   BUTTON SYSTEM (CLEAR HIERARCHY)
+   TYPOGRAPHY HELPERS
+   ========================================== */
+
+.signature-subheading {
+    font-family: "Italianno", cursive;
+    font-size: 48px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   BUTTONS
    ========================================== */
 
 .nav-btn,
@@ -193,8 +186,6 @@ a {
     border: 1px solid rgba(0,0,0,0.08);
 }
 
-
-/* HERO BUTTON LAYOUT */
 .hero-actions {
     display: flex;
     flex-direction: column;
@@ -211,7 +202,7 @@ a {
 
 
 /* ==========================================
-   PHILOSOPHY BOX (GRADIENT FIXED)
+   PHILOSOPHY BOX
    ========================================== */
 
 .philosophy-text {
@@ -240,13 +231,14 @@ a {
 }
 
 .section-tag {
-    font-size: var(--section-script);
+    font-family: "Italianno", cursive;
+    font-size: 48px;
     line-height: 1;
 }
 
 
 /* ==========================================
-   CARDS (UNCHANGED AS REQUESTED)
+   CARDS (UNCHANGED COLORS)
    ========================================== */
 
 .services-grid {
@@ -266,13 +258,13 @@ a {
 .approach-card { background: var(--approach); }
 
 .service-card a {
-    color: inherit;
     font-weight: 700;
+    color: inherit;
 }
 
 
 /* ==========================================
-   CTA SECTION (BOTTOM BOX FIXED)
+   CTA SECTION
    ========================================== */
 
 .cta-section {
