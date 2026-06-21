@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #EFE5D4; /* Locked to your exact canvas tone */
+    background-color: #EFE5D4; /* 1. Your exact requested background color */
     color: #1C1B1A; 
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -24,16 +24,16 @@ body {
 }
 
 /* ==========================================
-   2. REUSABLE TRADITIONAL HANDWRITTEN FONTS
+   2. TRADITIONAL HANDWRITTEN FONTS (FIXED RULES)
    ========================================== */
-/* Upscaled to perfectly replicate the visual presence of your Framer site */
+/* Core heading font with explicit italic rules to force browser display */
 .signature-heading {
     font-family: 'Italianno', cursive;
     font-size: 78px; 
     font-weight: 400; 
+    font-style: italic; /* Forces the signature sweeping curve */
     line-height: 0.85em; 
     letter-spacing: 0em; 
-    font-style: normal;
     text-transform: none;
     color: #1C1B1A; 
     display: inline-block;
@@ -44,19 +44,19 @@ body {
     font-family: 'Italianno', cursive;
     font-size: 56px; 
     font-weight: 400; 
+    font-style: italic; /* Forces the signature sweeping curve */
     line-height: 0.85em; 
     letter-spacing: 0em; 
-    font-style: normal;
     text-transform: none;
     color: #1C1B1A; 
     display: inline-block;
 }
 
 /* ==========================================
-   3. MENU BAR (RE-COLORED AND PADDING BALANCED)
+   3. RE-COLORED FIXED MENU BAR 
    ========================================== */
 .navbar {
-    background-color: #F7F0E5; /* Your exact requested top bar color */
+    background-color: #F7F0E5; /* 2. Your exact requested menu bar color */
     position: sticky;
     top: 0;
     z-index: 1000;
