@@ -1,6 +1,369 @@
-/* Core Styling based on */
-body { font-family: sans-serif; background-color: #fcfbfa; color: #2d2a29; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-.grid-3-columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-.card { background: #fff; padding: 40px; border-radius: 8px; }
-/* ...additional CSS for typography and layout... */
+/* ==========================================
+   1. GLOBAL STYLES, FONTS & RE-SETS
+   ========================================== */
+@import url('https://googleapis.com');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #EFE9E0; /* Exact Framer sand/beige background */
+    color: #1C1B1A; /* Crisp charcoal near-black text */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ==========================================
+   2. STICKY STATIC NAVIGATION BAR
+   ========================================== */
+.navbar {
+    background-color: #EFE9E0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #1C1B1A;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+
+.title-sub {
+    color: #706B64;
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-item {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #55514C;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #1C1B1A;
+}
+
+/* Rounded Pill Button for Schedule */
+.nav-btn {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #EFE9E0;
+    background-color: #1C1B1A;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 100px; /* Perfect pill-shape rounding */
+    transition: opacity 0.2s ease;
+}
+
+.nav-btn:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================
+   3. HERO SECTION (CENTERED & AIRY)
+   ========================================== */
+.hero-section {
+    padding: 100px 0 60px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Small capital tracking header text */
+.hero-content h1 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #7A746D;
+    margin-bottom: 28px;
+    line-height: 1.4;
+}
+
+/* Signature script-style flowing text header */
+.hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem; /* Prominent sizing matching screenshot */
+    font-style: italic;
+    font-weight: 400;
+    color: #1C1B1A;
+    line-height: 1.15;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #423F3B;
+    max-width: 640px;
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+/* Buttons matching layout colors */
+.btn-primary {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #EFE9E0;
+    background-color: #1C1B1A;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 100px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1C1B1A;
+    background-color: transparent;
+    border: 1px solid rgba(28, 27, 26, 0.2);
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 100px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(28, 27, 26, 0.04);
+}
+
+/* ==========================================
+   4. PILLED PHILOSOPHY BLOCK
+   ========================================== */
+.philosophy-section {
+    padding: 20px 0 80px 0;
+}
+
+/* Beautiful custom soft-curved background pod */
+.philosophy-text {
+    background-color: #E5DDD2; /* Darker sand accent color */
+    padding: 40px 60px;
+    border-radius: 100px; /* Generates the signature Framer pill-shape */
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;
+    color: #383532;
+    max-width: 820px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   5. CARE PATHWAYS / LOWER SECTIONS
+   ========================================== */
+.services-section {
+    padding: 60px 0 100px 0;
+    text-align: center;
+}
+
+.section-intro {
+    margin-bottom: 54px;
+}
+
+.section-tag {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-style: italic;
+    color: #1C1B1A;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.section-intro h2 {
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #423F3B;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color: #F7F5F0;
+    padding: 40px 32px;
+    border-radius: 24px; /* Soft layout edges */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #7A746D;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+}
+
+.service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #1C1B1A;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 0.98rem;
+    color: #59544E;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.card-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1C1B1A;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   6. LOWER SECTION CALL TO ACTION & FOOTER
+   ========================================== */
+.cta-section {
+    background-color: #1C1B1A; /* Beautiful high-contrast accent flip */
+    color: #EFE9E0;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    color: #A39E96;
+    margin-bottom: 32px;
+}
+
+.btn-primary-dark {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1C1B1A;
+    background-color: #EFE9E0;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 100px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary-dark:hover {
+    opacity: 0.9;
+}
+
+.footer {
+    background-color: #EFE9E0;
+    padding: 48px 0;
+    border-top: 1px solid rgba(28, 27, 26, 0.06);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #423F3B;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: #7A746D;
+}
+
+/* ==========================================
+   7. PHONE & TABLET SCALING
+   ========================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+    .hero-subtitle {
+        font-size: 2.5rem;
+    }
+    .philosophy-text {
+        border-radius: 32px; /* Scales down rounding on mobile gracefully */
+        padding: 32px 24px;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
