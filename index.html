@@ -1,150 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Jessica Fritzges, Licensed Psychologist</title>
-    <!-- Tailwind CSS Script -->
-    <script src="https://jsdelivr.net"></script>
-    
-    <!-- Google Fonts Integration matching the Framer typography exactly -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-syne { font-family: 'Syne', sans-serif; }
-    </style>
+    <title>Dr. Jessica Fritzges | Licensed Psychologist</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#F6F5F2] text-[#2C2A29] antialiased selection:bg-[#EAE6E1]">
+<body>
 
-    <!-- Navigation Header Bar -->
-    <nav class="sticky top-0 z-50 bg-[#F6F5F2]/80 backdrop-blur-md border-b border-[#2C2A29]/5">
-        <div class="max-w-6xl mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
-            <a href="#" class="font-syne text-md md:text-lg font-medium tracking-tight text-[#2C2A29]">
-                Dr. Jessica Fritzges, Licensed Psychologist
-            </a>
-            
-            <!-- Links and Desktop Action Button -->
-            <div class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wide">
-                <a href="#" class="text-[#2C2A29]/80 hover:text-[#2C2A29] transition-colors">Home</a>
-                <a href="#pathways" class="text-[#2C2A29]/80 hover:text-[#2C2A29] transition-colors">Therapy</a>
-                <a href="#pathways" class="text-[#2C2A29]/80 hover:text-[#2C2A29] transition-colors">Evaluations</a>
-                <a href="#approach" class="text-[#2C2A29]/80 hover:text-[#2C2A29] transition-colors">About</a>
-                <a href="#contact" class="text-[#2C2A29]/80 hover:text-[#2C2A29] transition-colors">Contact</a>
-                <a href="#contact" class="bg-[#2C2A29] text-[#F6F5F2] px-5 py-3 rounded-full hover:bg-black transition-all font-syne font-medium text-xs">
-                    Schedule Appointment
-                </a>
+    <!-- Static Navigation Menu Bar (Identical across all pages) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Dr. Jessica Fritzges, <span class="title-sub">Licensed Psychologist</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item active">Home</a>
+                <a href="therapy.html" class="nav-item">Therapy</a>
+                <a href="evaluations.html" class="nav-item">Evaluations</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+                <a href="schedule.html" class="nav-btn">Schedule Appointment</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Hero Split Grid Section -->
-    <header class="max-w-6xl mx-auto px-6 md:px-12 pt-20 md:pt-28 pb-20 grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-        <!-- Subtitle left label layout column -->
-        <div class="lg:col-span-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#2C2A29]/50 pt-3">
-            Therapy and psychological evaluations in a calm, thoughtful setting
-        </div>
-        
-        <!-- Large Text content and primary buttons area right column -->
-        <div class="lg:col-span-8">
-            <h1 class="font-syne text-4xl sm:text-5xl md:text-6xl font-normal leading-[1.15] text-[#2C2A29] mb-8 tracking-tight">
-                Steady support for insight, healing, and next steps
-            </h1>
-            <p class="text-base md:text-lg text-[#2C2A29]/70 font-light leading-relaxed max-w-2xl mb-12">
-                Dr. Jessica Fritzges offers a balanced, collaborative space for adults, families, and clients seeking clarity through therapy or psychological evaluation. The work is paced, respectful, and grounded in careful listening.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="#contact" class="w-full sm:w-auto bg-[#2C2A29] text-[#F6F5F2] font-syne text-sm font-medium px-8 py-4 rounded-full text-center hover:bg-black transition-all shadow-sm">
-                    Schedule Appointment
-                </a>
-                <a href="#pathways" class="w-full sm:w-auto border border-[#2C2A29]/20 text-[#2C2A29] font-syne text-sm font-medium px-8 py-4 rounded-full text-center hover:bg-[#2C2A29]/5 transition-all">
-                    Explore Services
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Full-Width Middle Intermission Highlight Divider Segment -->
-    <section class="border-y border-[#2C2A29]/10 bg-[#FAF9F6] py-16">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="font-syne text-xl md:text-2xl text-[#2C2A29]/80 font-normal leading-relaxed">
-                A structured process, warm conversation, and practical recommendations — always tailored to the person in front of the work.
-            </p>
-        </div>
-    </section>
-
-    <!-- Care Pathways Dynamic 3-Column Structured Layout Block -->
-    <section id="pathways" class="max-w-6xl mx-auto px-6 md:px-12 py-24">
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-16 items-start">
-            <div class="lg:col-span-4">
-                <h2 class="font-syne text-3xl md:text-4xl font-normal text-[#2C2A29] mb-4">Care pathways</h2>
-            </div>
-            <div class="lg:col-span-8">
-                <p class="text-[#2C2A29]/60 text-sm md:text-base font-light tracking-wide pt-2">
-                    Choose the starting point that fits what you need right now.
+    <main>
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="container hero-content">
+                <h1>Therapy and psychological evaluations in a calm, thoughtful setting</h1>
+                <p class="hero-subtitle">Steady support for insight, healing, and next steps</p>
+                <p class="hero-description">
+                    Dr. Jessica Fritzges offers a balanced, collaborative space for adults, families, and clients seeking clarity through therapy or psychological evaluation. The work is paced, respectful, and grounded in careful listening.
                 </p>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 items-stretch">
-            <!-- 1. Therapy Column Container Box -->
-            <div class="bg-white rounded-[2rem] p-8 md:p-10 border border-[#2C2A29]/5 flex flex-col justify-between transition-transform duration-300 hover:translate-y-[-2px]">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-[#2C2A29]/40 font-semibold block mb-2">Service Line</span>
-                    <h3 class="font-syne text-2xl font-normal text-[#2C2A29] mb-2">Therapy</h3>
-                    <div class="text-xs text-[#2C2A29]/50 italic mb-6">Support for emotional health</div>
-                    <p class="text-sm text-[#2C2A29]/70 leading-relaxed font-light">
-                        Individual therapy for anxiety, depression, stress, relationships, transitions, and patterns that feel hard to shift alone.
-                    </p>
+                <div class="hero-actions">
+                    <a href="schedule.html" class="btn-primary">Schedule Appointment</a>
+                    <a href="#services" class="btn-secondary">Explore Services</a>
                 </div>
             </div>
+        </header>
 
-            <!-- 2. Evaluations Column Container Box -->
-            <div class="bg-white rounded-[2rem] p-8 md:p-10 border border-[#2C2A29]/5 flex flex-col justify-between transition-transform duration-300 hover:translate-y-[-2px]">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-[#2C2A29]/40 font-semibold block mb-2">Service Line</span>
-                    <h3 class="font-syne text-2xl font-normal text-[#2C2A29] mb-2">Evaluations</h3>
-                    <div class="text-xs text-[#2C2A29]/50 italic mb-6">Clarity through assessment</div>
-                    <p class="text-sm text-[#2C2A29]/70 leading-relaxed font-light">
-                        Psychological evaluations designed to answer meaningful questions and provide practical recommendations for care, school, or treatment planning.
-                    </p>
+        <!-- Core Philosophy Banner -->
+        <section class="philosophy-section">
+            <div class="container text-center">
+                <blockquote class="philosophy-text">
+                    "A structured process, warm conversation, and practical recommendations — always tailored to the person in front of the work."
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Care Pathways / Services Grid Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-intro">
+                    <span class="section-tag">Care pathways</span>
+                    <h2>Choose the starting point that fits what you need right now.</h2>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Column 1: Therapy -->
+                    <div class="service-card">
+                        <span class="card-label">Therapy</span>
+                        <h3>Support for emotional health</h3>
+                        <p>Individual therapy for anxiety, depression, stress, relationships, transitions, and patterns that feel hard to shift alone.</p>
+                        <a href="therapy.html" class="card-link">Learn about therapy &rarr;</a>
+                    </div>
+
+                    <!-- Column 2: Evaluations -->
+                    <div class="service-card">
+                        <span class="card-label">Evaluations</span>
+                        <h3>Clarity through assessment</h3>
+                        <p>Psychological evaluations designed to answer meaningful questions and provide practical recommendations for care, school, or treatment planning.</p>
+                        <a href="evaluations.html" class="card-link">Learn about evaluations &rarr;</a>
+                    </div>
+
+                    <!-- Column 3: Approach -->
+                    <div class="service-card">
+                        <span class="card-label">Approach</span>
+                        <h3>Grounded and collaborative</h3>
+                        <p>A professional relationship built on warmth, structure, careful attention, and respect for your lived experience.</p>
+                        <a href="about.html" class="card-link">Learn about the approach &rarr;</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- 3. Approach Column Container Box -->
-            <div id="approach" class="bg-white rounded-[2rem] p-8 md:p-10 border border-[#2C2A29]/5 flex flex-col justify-between transition-transform duration-300 hover:translate-y-[-2px]">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-[#2C2A29]/40 font-semibold block mb-2">Service Line</span>
-                    <h3 class="font-syne text-2xl font-normal text-[#2C2A29] mb-2">Approach</h3>
-                    <div class="text-xs text-[#2C2A29]/50 italic mb-6">Grounded and collaborative</div>
-                    <p class="text-sm text-[#2C2A29]/70 leading-relaxed font-light">
-                        A therapeutic relationship built on warmth, compassion, individualized treatment, and accompaniment through your growth process.
-                    </p>
-                </div>
+        <!-- Call to Action (CTA) Section -->
+        <section class="cta-section">
+            <div class="container cta-content">
+                <h2>Ready to begin with a conversation?</h2>
+                <p>Use the contact page to request an appointment or ask a question about fit, services, and availability.</p>
+                <a href="contact.html" class="btn-primary-dark">Contact Dr. Fritzges</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact & Action Footer Base Framework Area -->
-    <footer id="contact" class="max-w-6xl mx-auto px-6 md:px-12 pb-16">
-        <div class="bg-[#2C2A29] text-[#F6F5F2] rounded-[2.5rem] p-10 md:p-20 text-center relative">
-            <h2 class="font-syne text-3xl md:text-5xl font-normal mb-6 tracking-tight">
-                Ready to begin with a conversation?
-            </h2>
-            <p class="text-[#F6F5F2]/70 max-w-lg mx-auto text-sm md:text-base font-light mb-10 leading-relaxed">
-                Use the contact page to request an appointment or ask a question through the patient portal.
-            </p>
-            <a href="#" class="inline-block bg-[#F6F5F2] text-[#2C2A29] font-syne text-sm font-medium px-10 py-4 rounded-full hover:bg-white transition-all shadow-md">
-                Contact Dr. Fritzges
-            </a>
-            
-            <!-- Bottom Legal Credits Layout Bar -->
-            <div class="mt-20 pt-8 border-t border-[#F6F5F2]/10 flex flex-col sm:flex-row items-center justify-between text-xs text-[#F6F5F2]/40 gap-4">
-                <p>© 2026 Dr. Jessica Fritzges, Licensed Psychologist</p>
-                <p class="font-light tracking-wide">Therapy and evaluations with clarity, warmth, and compassion.</p>
-            </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-tagline">Therapy and evaluations with clarity, warmth, and compassion.</p>
+            <p class="footer-copyright">&copy; 2026 Dr. Jessica Fritzges, Licensed Psychologist</p>
         </div>
     </footer>
 
