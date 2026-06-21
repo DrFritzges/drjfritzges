@@ -1,3 +1,4 @@
+
 /* ==========================================
    FONTS
    ========================================== */
@@ -24,12 +25,13 @@ body {
     font-family: "Philosopher", sans-serif;
     background: #EFE5D4;
     color: #17212B;
+    font-size: 18px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
 }
 
 
-/* Remove default blue links everywhere */
+/* Remove default link blue everywhere */
 a {
     color: inherit;
     text-decoration: none;
@@ -48,7 +50,15 @@ a {
     --evaluation: #eddac9;
     --approach: #e3d7d5;
 
-    --section-pad: clamp(80px, 9vw, 160px);
+    /* TYPOGRAPHY SCALE (FIXED) */
+    --text-sm: 16px;
+    --text-md: 18px;
+    --text-lg: 22px;
+
+    --hero-script: 64px;
+    --section-script: 48px;
+
+    --section-pad: clamp(90px, 10vw, 170px);
 }
 
 
@@ -56,25 +66,27 @@ a {
    TYPOGRAPHY
    ========================================== */
 
-/* HERO SCRIPT (FIXED 54px ISSUE) */
-.signature-heading {
+/* HERO SCRIPT (STEADY SUPPORT FIXED) */
+.hero-section .signature-heading {
     font-family: "Italianno", cursive !important;
-    font-size: 54px !important;
+    font-size: var(--hero-script) !important;
     line-height: 0.95 !important;
     font-weight: 400 !important;
+    display: block;
+    text-align: center;
 }
 
-/* SMALLER SCRIPT (Care Pathways) */
+/* CARE PATHWAYS */
 .signature-subheading {
     font-family: "Italianno", cursive;
-    font-size: 40px;
-    line-height: 0.95;
+    font-size: var(--section-script);
+    line-height: 1;
     font-weight: 400;
 }
 
 
 /* ==========================================
-   NAVIGATION
+   NAVIGATION (FIXED LAYOUT)
    ========================================== */
 
 .navbar {
@@ -88,32 +100,35 @@ a {
 .nav-container {
     max-width: 1180px;
     margin: 0 auto;
-    padding: 20px 32px;
+    padding: 18px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-logo {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
 }
 
 .title-sub {
-    display: block;
-    font-weight: 400;
-    color: rgba(23,33,43,0.65);
+    font-weight: 700;
+    opacity: 0.7;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
+    gap: 24px;
     align-items: center;
 }
 
 
 /* ==========================================
-   HERO
+   HERO (BEACH IMAGE)
    ========================================== */
 
 .hero-section {
@@ -134,23 +149,23 @@ a {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 22px;
 }
 
 .hero-content h1 {
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(23,33,43,0.6);
 }
 
 .hero-description {
-    font-size: 15px;
+    font-size: 18px;
     color: rgba(23,33,43,0.82);
 }
 
@@ -159,7 +174,6 @@ a {
    BUTTON SYSTEM (CLEAR HIERARCHY)
    ========================================== */
 
-/* PRIMARY CTA = DARK (Schedule buttons) */
 .nav-btn,
 .btn-primary {
     background: var(--charcoal);
@@ -170,7 +184,6 @@ a {
     display: inline-block;
 }
 
-/* SECONDARY CTA = EVALUATION COLOR */
 .btn-secondary {
     background: var(--evaluation);
     color: var(--charcoal);
@@ -192,22 +205,22 @@ a {
 .btn-primary,
 .btn-secondary {
     width: 100%;
-    max-width: 620px;
+    max-width: 640px;
     text-align: center;
 }
 
 
 /* ==========================================
-   PHILOSOPHY BOX
+   PHILOSOPHY BOX (GRADIENT FIXED)
    ========================================== */
 
 .philosophy-text {
     max-width: 860px;
     margin: 0 auto;
-    padding: 48px 64px;
+    padding: 52px 64px;
     border-radius: 48px;
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
 
     background: linear-gradient(
         135deg,
@@ -222,12 +235,13 @@ a {
    ========================================== */
 
 .services-section {
-    padding: 40px 0 var(--section-pad);
+    padding: 50px 0 var(--section-pad);
     text-align: center;
 }
 
 .section-tag {
-    font-size: 40px;
+    font-size: var(--section-script);
+    line-height: 1;
 }
 
 
@@ -247,20 +261,10 @@ a {
     text-align: left;
 }
 
-.therapy-card {
-    background: var(--therapy);
-}
+.therapy-card { background: var(--therapy); }
+.evaluation-card { background: var(--evaluation); }
+.approach-card { background: var(--approach); }
 
-.evaluation-card {
-    background: var(--evaluation);
-}
-
-.approach-card {
-    background: var(--approach);
-}
-
-
-/* card links */
 .service-card a {
     color: inherit;
     font-weight: 700;
@@ -268,7 +272,7 @@ a {
 
 
 /* ==========================================
-   CTA SECTION (BOTTOM DARK BLOCK FIXED)
+   CTA SECTION (BOTTOM BOX FIXED)
    ========================================== */
 
 .cta-section {
@@ -276,6 +280,13 @@ a {
     color: var(--paper);
     text-align: center;
     padding: var(--section-pad) 0;
+}
+
+.cta-section p {
+    font-size: 18px;
+    max-width: 720px;
+    margin: 0 auto;
+    opacity: 0.85;
 }
 
 
@@ -303,7 +314,7 @@ a {
 
     .nav-container {
         flex-direction: column;
-        gap: 16px;
+        gap: 14px;
     }
 
     .hero-content {
