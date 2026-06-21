@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #EFE5D4; /* 1. Your exact requested background color */
+    background-color: #EFE5D4; /* Your requested canvas background */
     color: #1C1B1A; 
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -24,39 +24,40 @@ body {
 }
 
 /* ==========================================
-   2. TRADITIONAL HANDWRITTEN FONTS (FIXED RULES)
+   2. REUSABLE TRADITIONAL HANDWRITTEN FONTS (FRAMER SPECS)
    ========================================== */
-/* Core heading font with explicit italic rules to force browser display */
 .signature-heading {
-    font-family: 'Italianno', cursive;
-    font-size: 78px; 
-    font-weight: 400; 
-    font-style: italic; /* Forces the signature sweeping curve */
-    line-height: 0.85em; 
-    letter-spacing: 0em; 
+    font-family: "Italianno", sans-serif;
+    font-size: 54px; /* Exact size from your specs */
+    font-style: normal; /* Exact style from your specs */
+    font-weight: 400; /* Exact weight from your specs */
+    letter-spacing: 0em; /* Exact tracking from your specs */
+    line-height: 0.95em; /* Exact tight line height from your specs */
     text-transform: none;
     color: #1C1B1A; 
     display: inline-block;
+    /* Injected your exact OpenType feature rules from the inspector */
+    font-feature-settings: "blwf" on, "cv03" on, "cv04" on, "cv09" on, "cv11" on;
 }
 
-/* Care Pathways scaled to precisely 3/4 of the hero text layout size */
 .signature-subheading {
-    font-family: 'Italianno', cursive;
-    font-size: 56px; 
+    font-family: "Italianno", sans-serif;
+    font-size: 40.5px; /* Mathematically 3/4 of 54px */
+    font-style: normal; 
     font-weight: 400; 
-    font-style: italic; /* Forces the signature sweeping curve */
-    line-height: 0.85em; 
     letter-spacing: 0em; 
+    line-height: 0.95em; 
     text-transform: none;
     color: #1C1B1A; 
     display: inline-block;
+    font-feature-settings: "blwf" on, "cv03" on, "cv04" on, "cv09" on, "cv11" on;
 }
 
 /* ==========================================
-   3. RE-COLORED FIXED MENU BAR 
+   3. FIXED MENU BAR (COLOR MATCHED & LEFT ALIGNED)
    ========================================== */
 .navbar {
-    background-color: #F7F0E5; /* 2. Your exact requested menu bar color */
+    background-color: #F7F0E5; /* Your requested custom menu bar color */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -345,7 +346,7 @@ body {
 }
 
 /* ==========================================
-   7. PHONE DISPLAY SCALE RESPONSIVENESS
+   7. SMARTPHONE LAYOUT SCALING
    ========================================== */
 @media (max-width: 768px) {
     .nav-container {
@@ -359,10 +360,10 @@ body {
         gap: 16px;
     }
     .signature-heading {
-        font-size: 50px; 
+        font-size: 38px; 
     }
     .signature-subheading {
-        font-size: 38px;
+        font-size: 28px;
     }
     .philosophy-text {
         border-radius: 32px;
