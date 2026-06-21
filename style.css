@@ -1,43 +1,10 @@
-/* ==========================================
-   FONTS
-   ========================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Italianno&display=swap');
-
-
-/* ==========================================
-   RESET
-   ========================================== */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-
-/* ==========================================
-   BASE
-   ========================================== */
-
-body {
-    font-family: "Philosopher", sans-serif;
-    background: #EFE5D4;
-    color: #17212B;
-    font-size: 18px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-/* ==========================================
-   DESIGN TOKENS
-   ========================================== */
 
 :root {
     --charcoal: #1F1A17;
@@ -50,168 +17,191 @@ a {
     --section-pad: clamp(90px, 10vw, 170px);
 }
 
+body {
+    font-family: "Philosopher", sans-serif;
+    background: var(--paper);
+    color: #17212B;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
 
-/* ==========================================
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   GLOBAL CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+/* =========================
    NAVIGATION
-   ========================================== */
+========================= */
 
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
     background: #F7F0E5;
-    border-bottom: 1px solid rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(0,0,0,.05);
 }
 
 .nav-container {
     max-width: 1180px;
     margin: 0 auto;
     padding: 18px 32px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
     font-size: 16px;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
 }
 
 .title-sub {
-    font-weight: 700;
-    opacity: 0.7;
+    opacity: .7;
 }
 
 .nav-links {
     display: flex;
-    gap: 24px;
     align-items: center;
+    gap: 24px;
 }
 
+.nav-item:hover {
+    opacity: .7;
+}
 
-/* ==========================================
+/* =========================
    HERO
-   ========================================== */
+========================= */
 
 .hero-section {
     position: relative;
     background-image: url('./assets/beach.jpg');
     background-size: cover;
     background-position: center;
-    padding: var(--section-pad) 0;
+    padding-top: var(--section-pad);
+    padding-bottom: 140px;
 }
 
 .hero-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(239, 229, 212, 0.72);
+    background: rgba(239,229,212,.72);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+
     max-width: 900px;
-    margin: 0 auto;
+
     text-align: center;
+
     display: flex;
     flex-direction: column;
     gap: 22px;
 }
 
-/* small uppercase line */
 .hero-content h1 {
     font-size: 14px;
-    letter-spacing: 0.08em;
+    letter-spacing: .08em;
     text-transform: uppercase;
-    color: rgba(23,33,43,0.6);
+    color: rgba(23,33,43,.6);
 }
-
-/* 🔥 MAIN HERO LINE (FIXED SCALE) */
-.hero-section .signature-heading {
-    font-family: "Italianno", cursive !important;
-    font-size: 72px !important;
-    line-height: 0.9 !important;
-    font-weight: 400 !important;
-    display: block;
-    text-align: center;
-    margin: 0;
-    text-shadow: 0px 1px 0px rgba(0,0,0,0.08);
-}
-
-/* supporting paragraph */
-.hero-description {
-    font-size: 18px;
-    color: rgba(23,33,43,0.82);
-    max-width: 720px;
-    margin: 0 auto;
-}
-
-
-/* ==========================================
-   TYPOGRAPHY HELPERS
-   ========================================== */
 
 .signature-subheading {
     font-family: "Italianno", cursive;
-    font-size: 48px;
+    font-size: 52px;
     line-height: 1;
 }
 
+.hero-description {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(23,33,43,.82);
+}
 
-/* ==========================================
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.hero-subtitle {
+    margin-bottom: 8px;
+}
+
+/* =========================
    BUTTONS
-   ========================================== */
+========================= */
 
 .nav-btn,
-.btn-primary {
+.btn-primary,
+.btn-primary-dark {
     background: var(--charcoal);
     color: var(--paper);
     font-weight: 700;
-    padding: 12px 22px;
+
+    padding: 14px 24px;
     border-radius: 999px;
+
     display: inline-block;
+    text-align: center;
 }
 
 .btn-secondary {
     background: var(--evaluation);
     color: var(--charcoal);
+
     font-weight: 700;
-    padding: 16px 24px;
+    padding: 14px 24px;
+
     border-radius: 999px;
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,.08);
 }
 
-.hero-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    align-items: center;
+.nav-btn,
+.btn-primary {
+    min-width: 220px;
 }
 
-.btn-primary,
-.btn-secondary {
-    width: 100%;
-    max-width: 640px;
-    text-align: center;
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy-section {
+    padding-top: 80px;
 }
-
-
-/* ==========================================
-   PHILOSOPHY BOX
-   ========================================== */
 
 .philosophy-text {
     max-width: 860px;
+
     margin: 0 auto;
+
     padding: 52px 64px;
+
     border-radius: 48px;
+
     text-align: center;
-    font-size: 18px;
 
     background: linear-gradient(
         135deg,
@@ -220,75 +210,104 @@ a {
     );
 }
 
-
-/* ==========================================
+/* =========================
    SERVICES
-   ========================================== */
+========================= */
 
 .services-section {
-    padding: 50px 0 var(--section-pad);
+    padding: 60px 0 var(--section-pad);
+}
+
+.section-intro {
     text-align: center;
+    max-width: 760px;
+    margin: 0 auto 60px auto;
 }
 
 .section-tag {
+    display: block;
+    margin-bottom: 12px;
+
     font-family: "Italianno", cursive;
     font-size: 48px;
-    line-height: 1;
 }
-
-
-/* ==========================================
-   CARDS (UNCHANGED COLORS)
-   ========================================== */
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 32px;
+
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
 .service-card {
     padding: 42px 36px;
     border-radius: 36px;
-    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.therapy-card { background: var(--therapy); }
-.evaluation-card { background: var(--evaluation); }
-.approach-card { background: var(--approach); }
+.therapy-card {
+    background: var(--therapy);
+}
 
-.service-card a {
+.evaluation-card {
+    background: var(--evaluation);
+}
+
+.approach-card {
+    background: var(--approach);
+}
+
+.card-label {
+    font-size: 13px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    opacity: .65;
+}
+
+.card-link {
     font-weight: 700;
-    color: inherit;
+    margin-top: auto;
 }
 
-
-/* ==========================================
-   CTA SECTION
-   ========================================== */
+/* =========================
+   CTA
+========================= */
 
 .cta-section {
     background: var(--charcoal);
     color: var(--paper);
+
     text-align: center;
-    padding: var(--section-pad) 0;
+
+    padding: 80px 0;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    align-items: center;
 }
 
 .cta-section p {
-    font-size: 18px;
     max-width: 720px;
-    margin: 0 auto;
-    opacity: 0.85;
+    opacity: .85;
 }
 
-
-/* ==========================================
+/* =========================
    FOOTER
-   ========================================== */
+========================= */
 
 .footer {
     padding: 60px 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
 }
 
 .footer-content {
@@ -297,10 +316,21 @@ a {
     align-items: center;
 }
 
-
-/* ==========================================
+/* =========================
    MOBILE
-   ========================================== */
+========================= */
+
+@media (max-width: 900px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -309,8 +339,21 @@ a {
         gap: 14px;
     }
 
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
     .hero-content {
-        padding: 0 16px;
+        padding: 0 8px;
+    }
+
+    .nav-btn,
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        max-width: 320px;
     }
 
     .philosophy-text {
@@ -321,72 +364,11 @@ a {
     .footer-content {
         flex-direction: column;
         gap: 14px;
-    }
-}
-/* ==========================================
-   JULY REFINEMENTS
-   ========================================== */
-
-/* Hero buttons side-by-side */
-.hero-actions {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-/* Make Schedule Appointment consistent */
-.nav-btn,
-.btn-primary {
-    min-width: 220px;
-    text-align: center;
-}
-
-/* More room below beach image */
-.hero-section {
-    padding-bottom: 140px;
-}
-
-/* More separation before gradient quote */
-.philosophy-section {
-    padding-top: 80px;
-}
-
-/* Narrower content area for cards */
-.services-grid {
-    max-width: 920px;
-    margin: 0 auto;
-}
-
-/* Reduce CTA height */
-.cta-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-/* Mobile navigation improvements */
-@media (max-width: 768px) {
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
+        text-align: center;
     }
 
-    .nav-btn {
-        min-width: 180px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        max-width: 320px;
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
