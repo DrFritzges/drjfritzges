@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapy | Dr. Jessica Fritzges</title>
 
-    <!-- FORCE LOAD ITALIANNNO -->
+    <!-- FORCE ITALIANNNO -->
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css">
@@ -42,44 +42,54 @@
 
 <main>
 
-<!-- HERO -->
+<!-- HERO (PROPER CENTERED LAYOUT) -->
 <header class="hero-section"
         style="
         background-image:url('./assets/beachsteps1.jpg');
-        padding-top:0;
-        padding-bottom:0;
         min-height:520px;
         display:flex;
         align-items:center;
+        justify-content:center;
+        padding-top:0;
+        padding-bottom:0;
         ">
 
     <div class="container hero-content"
-         style="padding-top:60px; padding-bottom:60px; max-width:900px;">
+         style="
+         max-width:900px;
+         text-align:center;
+         padding-top:90px;
+         padding-bottom:90px;
+         display:flex;
+         flex-direction:column;
+         align-items:center;
+         gap:18px;
+         ">
 
-        <!-- THERAPY TITLE (FIXED ITALIANNNO FORCE) -->
+        <!-- TITLE (MATCHES HOMEPAGE SCALE BETTER) -->
         <h1 style="
             font-family:'Italianno', cursive;
-            font-size:120px;
+            font-size:92px;
             line-height:1;
-            margin-bottom:10px;
-            font-weight:400;
+            margin:0;
         ">
             Therapy
         </h1>
 
-        <!-- QUOTE (50% VISUAL HIERARCHY) -->
+        <!-- QUOTE (≈75% OF TITLE VISUAL WEIGHT) -->
         <p style="
             font-family:'Italianno', cursive;
-            font-size:60px;
+            font-size:66px;
             line-height:1.1;
-            margin-top:10px;
-            margin-bottom:40px;
+            margin:0;
             opacity:0.95;
+            max-width:850px;
         ">
             “I think that the greatest gift we can give to each other is our honest self.” – Carl Rogers
         </p>
 
-        <p class="hero-description">
+        <!-- BODY TEXT -->
+        <p class="hero-description" style="margin-top:10px;">
             Welcome to my practice. I'm Dr. Jessica Fritzges, a licensed psychologist who offers compassionate
             individual therapy and psychological evaluations to adults to treat and diagnose complex trauma,
             PTSD, depression, anxiety, bipolar disorder, life transitions, grief, dissociation, personality
@@ -91,7 +101,7 @@
 </header>
 
 
-<!-- BODY 1 -->
+<!-- SECTION 1 -->
 <section class="philosophy-section">
 
     <div class="container">
@@ -123,7 +133,7 @@
 </section>
 
 
-<!-- BODY 2 -->
+<!-- SECTION 2 -->
 <section class="philosophy-section">
 
     <div class="container">
@@ -156,7 +166,7 @@
 </section>
 
 
-<!-- BODY 3 -->
+<!-- SECTION 3 -->
 <section class="philosophy-section">
 
     <div class="container">
@@ -179,10 +189,9 @@
                 is personal, confidential, genuine, and compassionate.
             </p>
 
-            <!-- CONSISTENT SPACING BLOCK -->
-            <div style="height:60px;"></div>
+            <!-- CTA BUTTON -->
+            <div style="height:40px;"></div>
 
-            <!-- CENTERED BUTTON -->
             <div style="text-align:center;">
                 <a href="https://www.therapyportal.com/p/drfritzges/"
                    class="btn-primary"
@@ -199,7 +208,9 @@
 </section>
 
 
-<!-- CTA (RESTORED CHARCOAL SECTION) -->
+<!-- CTA (CHARCOAL SECTION WITH EXTRA BEIGE BUFFER SPACE ABOVE) -->
+<div style="height:60px; background:#EFE5D4;"></div>
+
 <section class="cta-section">
 
     <div class="container cta-content">
