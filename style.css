@@ -372,3 +372,85 @@ a {
         padding-right: 20px;
     }
 }
+
+/* =========================
+   INTERIOR PAGE TEMPLATE
+   (Therapy, Evaluations, About)
+========================= */
+
+.page-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(239,229,212,.72);
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 90px 32px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: clamp(84px, 8vw, 108px);
+    line-height: .95;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+}
+
+.page-quote {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: clamp(52px, 5vw, 72px);
+    line-height: 1.05;
+    max-width: 900px;
+    margin: 0 auto 28px;
+}
+
+.page-intro {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.page-section {
+    max-width: 860px;
+    margin: 80px auto 0;
+}
+
+.page-section-right {
+    max-width: 860px;
+    margin: 80px 0 0 18%;
+}
+
+.page-subheading {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.page-button {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.page-buffer {
+    height: 70px;
+}
