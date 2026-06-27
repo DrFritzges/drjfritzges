@@ -1,3 +1,4 @@
+        ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapy | Dr. Jessica Fritzges</title>
 
-    <!-- FORCE ITALIANNNO -->
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- =========================
+     Navigation
+========================= -->
+
 <nav class="navbar">
+
     <div class="nav-container">
 
         <a href="./index.html" class="nav-logo">
@@ -23,77 +25,78 @@
         </a>
 
         <div class="nav-links">
-            <a href="./index.html" class="nav-item">Home</a>
-            <a href="./therapy.html" class="nav-item">Therapy</a>
-            <a href="./evaluations.html" class="nav-item">Evaluations</a>
-            <a href="./about.html" class="nav-item">About</a>
-            <a href="./contact.html" class="nav-item">Contact</a>
+
+            <a href="./index.html" class="nav-item">
+                Home
+            </a>
+
+            <a href="./therapy.html" class="nav-item active">
+                Therapy
+            </a>
+
+            <a href="./evaluations.html" class="nav-item">
+                Evaluations
+            </a>
+
+            <a href="./about.html" class="nav-item">
+                About
+            </a>
+
+            <a href="./contact.html" class="nav-item">
+                Contact
+            </a>
 
             <a href="https://www.therapyportal.com/p/drfritzges/"
                class="btn-primary"
                target="_blank"
                rel="noopener">
+
                 Schedule Appointment
+
             </a>
+
         </div>
 
     </div>
+
 </nav>
+
 
 <main>
 
-<!-- HERO (PROPER CENTERED LAYOUT) -->
-<header class="hero-section"
-        style="
-        background-image:url('./assets/beachsteps1.jpg');
-        min-height:520px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        padding-top:0;
-        padding-bottom:0;
-        ">
+<!-- =========================
+     HERO
+========================= -->
 
-    <div class="container hero-content"
-         style="
-         max-width:900px;
-         text-align:center;
-         padding-top:90px;
-         padding-bottom:90px;
-         display:flex;
-         flex-direction:column;
-         align-items:center;
-         gap:18px;
-         ">
+<header
+    class="page-hero"
+    style="background-image:url('./assets/beachsteps1.jpg');">
 
-        <!-- TITLE (MATCHES HOMEPAGE SCALE BETTER) -->
-        <h1 style="
-            font-family:'Italianno', cursive;
-            font-size:92px;
-            line-height:1;
-            margin:0;
-        ">
+    <div class="page-hero-content">
+
+        <h1 class="page-title">
             Therapy
         </h1>
 
-        <!-- QUOTE (≈75% OF TITLE VISUAL WEIGHT) -->
-        <p style="
-            font-family:'Italianno', cursive;
-            font-size:66px;
-            line-height:1.1;
-            margin:0;
-            opacity:0.95;
-            max-width:850px;
-        ">
-            “I think that the greatest gift we can give to each other is our honest self.” – Carl Rogers
+        <p class="page-quote">
+            “I think that the greatest gift we can give to each other
+            is our honest self.”
+            <br>
+            – Carl Rogers
         </p>
 
-        <!-- BODY TEXT -->
-        <p class="hero-description" style="margin-top:10px;">
-            Welcome to my practice. I'm Dr. Jessica Fritzges, a licensed psychologist who offers compassionate
-            individual therapy and psychological evaluations to adults to treat and diagnose complex trauma,
-            PTSD, depression, anxiety, bipolar disorder, life transitions, grief, dissociation, personality
-            disorders, and more.
+        <p class="page-intro">
+
+            Welcome to my practice.
+
+            I'm Dr. Jessica Fritzges,
+            a licensed psychologist who offers compassionate
+            individual therapy and psychological evaluations
+            to adults to treat and diagnose complex trauma,
+            PTSD, depression, anxiety, bipolar disorder,
+            life transitions, grief, dissociation,
+            personality disorders, and more.
+
         </p>
 
     </div>
@@ -101,30 +104,133 @@
 </header>
 
 
-<!-- SECTION 1 -->
-<section class="philosophy-section">
+<!-- =========================
+     CONTENT
+========================= -->
 
-    <div class="container">
+<section class="page-content">
 
-        <div style="max-width:860px; margin:0 auto;">
+    <div class="page-section">
 
-            <h2 class="signature-subheading" style="font-size:42px; margin-bottom:18px;">
-                Individual therapy…
-            </h2>
+        <h2 class="page-subheading">
+            Individual therapy…
+        </h2>
 
-            <p>
-                …is a place where you can begin to address the unique challenges and emotions that have inspired
-                you to seek support. In a confidential space that meets you where you are, I provide personalized care
-                to help you learn the skills necessary to manage your emotions, sort out life challenges, and help
-                you feel better.
+        <p>
 
-                <br><br>
+            …is a place where you can begin to address the unique
+            challenges and emotions that have inspired you to seek
+            support.
 
-                In every initial appointment, new patients can expect a comprehensive evaluation of their strengths,
-                challenges, identified goals, and opportunities for growth. After a careful assessment that honors
-                your uniqueness and considers your areas of concern, I offer you feedback and a roadmap of how to
-                use therapy to reach your goals.
-            </p>
+            In a confidential space that meets you where you are,
+            I provide personalized care to help you learn the skills
+            necessary to manage your emotions, sort out life
+            challenges, and help you feel better.
+
+            <br><br>
+
+            In every initial appointment,
+            new patients can expect a comprehensive evaluation
+            of their strengths,
+            challenges,
+            identified goals,
+            and opportunities for growth.
+
+            After a careful assessment that honors your uniqueness
+            and considers your areas of concern,
+            I offer you feedback
+            and a roadmap for how therapy can help you reach your goals.
+
+        </p>
+
+    </div>
+
+
+    <div class="page-section-right">
+
+        <h2 class="page-subheading">
+            …A genuine relationship…
+        </h2>
+
+        <p>
+
+            Working from a collaborative perspective where all
+            needs and values are honored,
+            I offer an opportunity for genuine connection
+            and growth in our sessions together.
+
+            For those who may benefit,
+            I offer specialized treatment for complex trauma
+            and post-traumatic stress disorder (PTSD),
+            including Eye Movement Desensitization and
+            Reprocessing (EMDR),
+            trauma-focused Cognitive Behavioral Therapy (CBT),
+            and a phased approach to treating dissociative disorders.
+```
+            ```html
+            In the past, I've supported survivors of childhood trauma
+            and abuse, veterans, first responders,
+            healthcare workers,
+            as well as those managing histories of substance use
+            and addiction.
+
+            When people are seeking care for chronic,
+            personality-based challenges,
+            I incorporate principles from Dialectical Behavior
+            Therapy (DBT),
+            while using a relational approach
+            to work with attachment concerns.
+
+        </p>
+
+    </div>
+
+
+    <div class="page-section">
+
+        <h2 class="page-subheading">
+            …Delivering compassionate care.
+        </h2>
+
+        <p>
+
+            I believe that therapy is most beneficial when there is
+            mutual respect, understanding,
+            and a basis of safety from which to work.
+
+            To make that possible,
+            I offer care in a nonjudgmental atmosphere
+            that values each person's worth and dignity,
+            seeking to comprehensively address
+            all the aspects that make you who you are.
+
+            <br><br>
+
+            As a psychologist in independent practice,
+            I offer the opportunity to connect directly
+            for care that is personal,
+            confidential,
+            genuine,
+            and compassionate.
+
+            To learn more and schedule an initial appointment,
+            please use the scheduling request feature
+            in the patient portal to share a bit about your needs
+            and begin the conversation about what we can achieve
+            by working together.
+
+        </p>
+
+        <div class="page-button">
+
+            <a href="https://www.therapyportal.com/p/drfritzges/"
+               class="btn-primary"
+               target="_blank"
+               rel="noopener">
+
+                Schedule Appointment
+
+            </a>
 
         </div>
 
@@ -133,83 +239,12 @@
 </section>
 
 
-<!-- SECTION 2 -->
-<section class="philosophy-section">
-
-    <div class="container">
-
-        <div style="max-width:860px; margin-left:18%;">
-
-            <h2 class="signature-subheading" style="font-size:42px; margin-bottom:18px;">
-                …A genuine relationship…
-            </h2>
-
-            <p>
-                Working from a collaborative perspective where all needs and values are honored, I offer an
-                opportunity for genuine connection and growth in our sessions together. For those that may
-                benefit, I offer specialized treatment for complex trauma and post-traumatic stress disorder (PTSD),
-                including eye movement desensitization and reprocessing (EMDR) and trauma-focused cognitive behavioral
-                therapy (CBT), as well as a phased approach to treating dissociative disorders.
-
-                <br><br>
-
-                In the past, I've supported survivors of childhood trauma and abuse, veterans, first responders,
-                healthcare workers, as well as those managing histories of substance use and addiction. When people
-                are seeking care for chronic, personality-based challenges, I incorporate principles from dialectical
-                behavior therapy (DBT), and using a relational approach to work with attachment concerns.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+<div class="page-buffer"></div>
 
 
-<!-- SECTION 3 -->
-<section class="philosophy-section">
-
-    <div class="container">
-
-        <div style="max-width:860px; margin:0 auto;">
-
-            <h2 class="signature-subheading" style="font-size:42px; margin-bottom:18px;">
-                …Delivering compassionate care.
-            </h2>
-
-            <p>
-                I believe that therapy is most beneficial when there is mutual respect, understanding, and a basis
-                of safety from which to work; to make that possible, I offer care in a nonjudgmental atmosphere that
-                values each person's worth and dignity, seeking to comprehensively address all the aspects that make
-                you who you are.
-
-                <br><br>
-
-                As a psychologist in independent practice, I offer the opportunity to connect directly for care that
-                is personal, confidential, genuine, and compassionate.
-            </p>
-
-            <!-- CTA BUTTON -->
-            <div style="height:40px;"></div>
-
-            <div style="text-align:center;">
-                <a href="https://www.therapyportal.com/p/drfritzges/"
-                   class="btn-primary"
-                   target="_blank"
-                   rel="noopener">
-                    Schedule Appointment
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CTA (CHARCOAL SECTION WITH EXTRA BEIGE BUFFER SPACE ABOVE) -->
-<div style="height:60px; background:#EFE5D4;"></div>
+<!-- =========================
+     CALL TO ACTION
+========================= -->
 
 <section class="cta-section">
 
@@ -220,37 +255,45 @@
         </h2>
 
         <a href="https://www.therapyportal.com/p/drfritzges/"
-           style="
-             color:#EFE5D4;
-             text-decoration:none;
-             font-weight:700;
-           ">
-            Let’s connect.
+           target="_blank"
+           rel="noopener"
+           style="font-weight:700;">
+
+            Let's connect.
+
         </a>
 
     </div>
 
 </section>
 
-</main>
 
+<!-- =========================
+     FOOTER
+========================= -->
 
-<!-- FOOTER -->
 <footer class="footer">
 
     <div class="container footer-content">
 
         <p class="footer-tagline">
-            Therapy and evaluations with clarity, warmth, and compassion.
+            Therapy and evaluations with clarity,
+            warmth,
+            and compassion.
         </p>
 
         <p class="footer-copyright">
-            © 2026 Dr. Jessica Fritzges, Licensed Psychologist
+            © 2026 Dr. Jessica Fritzges,
+            Licensed Psychologist
         </p>
 
     </div>
 
 </footer>
 
+</main>
+
 </body>
 </html>
+```
+
